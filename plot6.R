@@ -40,7 +40,7 @@ p<-ggplot(changes_emissions_both, aes(x=factor(year), y=change*100, fill=County)
     facet_grid(.~ County, scales="free") +
     ylab("Percentage change within County relative to 1999") +
     xlab("Year") +
-    ggtitle(expression("Relative % increase or decrease of Emissions within Baltimore and Los Angeles"))
+    ggtitle("Relative % increase or decrease of Emissions within Baltimore and Los Angeles")
 
 p1 <- p + geom_text(aes(label= round(change*100, digits= 1)), vjust =-0.25)
 plot<- p1 + theme(legend.position = "none")
