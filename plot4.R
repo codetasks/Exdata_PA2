@@ -28,7 +28,7 @@ options(scipen=2)
 #plotting using 'ggplot2'
 p<-ggplot(data_by_type_year, aes(x=factor(year), y=Emissions ,fill= year,color= year)) + 
          geom_bar(stat="identity") + xlab("Year") +
-          ylab(expression("PM2.5 Emissions(Tons)")) +
+          ylab("PM2.5 Emissions(Tons)") +
          ggtitle("Emissions from coal related sources by year") 
 
 p1 <- p + geom_text(aes(label= rounded_emissions), vjust = -0.25)
